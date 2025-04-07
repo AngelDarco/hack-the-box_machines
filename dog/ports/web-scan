@@ -1,0 +1,18 @@
+# Nmap 7.94SVN scan initiated Sun Apr  6 17:19:58 2025 as: nmap --script http-enum -p 80 -vvv -oN web-scan 10.10.11.58
+Nmap scan report for dog.htb (10.10.11.58)
+Host is up, received echo-reply ttl 63 (0.14s latency).
+Scanned at 2025-04-06 17:19:58 -05 for 95s
+
+PORT   STATE SERVICE REASON
+80/tcp open  http    syn-ack ttl 63
+| http-enum: 
+|   /robots.txt: Robots file
+|   /.git/HEAD: Git folder
+|   /core/: Potentially interesting directory w/ listing on 'apache/2.4.41 (ubuntu)'
+|   /files/: Potentially interesting directory w/ listing on 'apache/2.4.41 (ubuntu)'
+|   /modules/: Potentially interesting directory w/ listing on 'apache/2.4.41 (ubuntu)'
+|   /sites/: Potentially interesting directory w/ listing on 'apache/2.4.41 (ubuntu)'
+|_  /themes/: Potentially interesting directory w/ listing on 'apache/2.4.41 (ubuntu)'
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sun Apr  6 17:21:33 2025 -- 1 IP address (1 host up) scanned in 95.75 seconds
